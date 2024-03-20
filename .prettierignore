@@ -1,0 +1,10 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+
+node_modules
+dist
+dist-ssr
+build
+public
