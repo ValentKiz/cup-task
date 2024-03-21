@@ -26,11 +26,10 @@
 		"types": ["@types/node"],
 		"paths": {
 			"@app/*": ["./src/app/*"],
-			"@components": ["./src/components/*"],
-			"@modules": ["./src/modules/*"],
-			"@pages": ["./src/pages*"],
-			"@shared": ["./src/shared*"],
-			"@public": ["./public/*"],
+			"@components/*": ["./src/components/*"],
+			"@modules/*": ["./src/modules/*"],
+			"@pages/*": ["./src/pages*"],
+			"@shared/*": ["./src/shared*"],
 			"@/*": ["./src/*"]
 		}
 	},
