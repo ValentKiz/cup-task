@@ -1,6 +1,18 @@
 import classNames from 'classnames';
 import './MarketTable.scss';
-import useMarketsData, {marketCurrencies, marketEndpoints} from '../../useMarketsData';
+import useMarketsData from '../../useMarketsData';
+import {CurrenciesTypes, MarketEndpoints} from '../../types';
+
+export const marketEndpoints: MarketEndpoints = ['first', 'second', 'third'];
+
+export const marketCurrencies: CurrenciesTypes = [
+	'rub/cupcake',
+	'usd/cupcake',
+	'eur/cupcake',
+	'rub/usd',
+	'rub/eur',
+	'eur/usd'
+];
 
 export default function MarketTable() {
 	const {data, togglePolling, isEnabled} = useMarketsData();

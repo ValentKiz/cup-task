@@ -1,17 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
-import {CurrenciesTypes, FetchMarketOptions, MarketDataType, MarketEndpoints, MarketRatesType} from './types';
+import {FetchMarketOptions, MarketDataType, MarketRatesType} from './types';
 import fetchMarket from './api/get-market';
-
-export const marketEndpoints: MarketEndpoints = ['first', 'second', 'third'];
-
-export const marketCurrencies: CurrenciesTypes = [
-	'rub/cupcake',
-	'usd/cupcake',
-	'eur/cupcake',
-	'rub/usd',
-	'rub/eur',
-	'eur/usd'
-];
 
 const initCurrencies: MarketRatesType = {
 	'eur/cupcake': 0,
