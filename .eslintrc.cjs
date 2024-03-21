@@ -46,9 +46,10 @@ module.exports = {
 				'plugin:prettier/recommended'
 			],
 			plugins: ['@typescript-eslint']
-			// rules: {
+			rules: {
+				'@typescript-eslint/no-use-before-define':['error', {functions: false}]
 			// 	'@typescript-eslint/no-unused-vars': 'warn'
-			// }
+			}
 		}
 	],
 	rules: {

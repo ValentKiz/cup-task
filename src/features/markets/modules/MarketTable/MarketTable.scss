@@ -13,6 +13,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
+		align-items: center;
 
 		width: 100%;
 		padding: 2rem 0;
@@ -23,23 +24,6 @@
 	}
 
 	&__row {
-		// &:not(:last-child),
-		// &:first-child {
-		// 	border-bottom: 2px solid currentcolor;
-		// }
-
-		// @media (width <= 575px) {
-		// 	display: flex;
-		// 	flex-direction: column;
-		// 	align-items: center;
-		// 	padding: 1rem 0;
-
-		// 	&--head {
-		// 		display: none;
-		// 	}
-
-		// 	// padding: 0.5rem 0.25rem;
-		// }
 	}
 
 	&__cell {
@@ -51,25 +35,60 @@
 		}
 
 		&-inner {
-			// overflow: hidden;
 			display: flex;
 			padding: 1rem 0.5rem;
 
-			// @media (width <= 575px) {
-			// 	// gap: 0.25rem;
-			// 	padding: 0.5rem 0.25rem;
-			// }
+			&--head {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			@media (width <= 575px) {
+				padding: 0.5rem 0.25rem;
+			}
+		}
+
+		&:not(:first-child) {
+			width: 22%;
+			max-width: 22%;
 		}
 
 		&--head {
 			font-size: 1.25rem;
 			font-weight: 600;
+
+			@media (width <= 575px) {
+				font-size: 1rem;
+			}
 		}
 	}
 
 	&__name {
 		font-weight: 600;
 		text-transform: uppercase;
+
+		@media (width <= 575px) {
+			font-weight: 500;
+		}
+	}
+
+	&__toggle-button {
+		@include hover {
+			color: white;
+			background-color: black;
+		}
+
+		display: block;
+
+		width: fit-content;
+		padding: 0.5rem 1rem;
+
+		color: black;
+
+		background-color: white;
+
+		transition: all 0.3s;
 	}
 
 	&__message {
