@@ -45,10 +45,9 @@ module.exports = {
 				// 'plugin:unicorn/recommended',
 				'plugin:prettier/recommended'
 			],
-			plugins: ['@typescript-eslint']
+			plugins: ['@typescript-eslint'],
 			rules: {
-				'@typescript-eslint/no-use-before-define':['error', {functions: false}]
-			// 	'@typescript-eslint/no-unused-vars': 'warn'
+				'@typescript-eslint/no-use-before-define': ['error', {functions: false}]
 			}
 		}
 	],

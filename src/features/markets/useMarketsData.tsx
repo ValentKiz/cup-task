@@ -1,6 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
-import {FetchMarketOptions, MarketDataType, MarketRatesType} from './types';
 import fetchMarket from './api/get-market';
+import {FetchMarketOptions, MarketDataType, MarketRatesType} from './types';
 
 const initCurrencies: MarketRatesType = {
 	'eur/cupcake': 0,
@@ -71,5 +71,5 @@ export default function useMarketsData() {
 		setIsEnabled(!isEnabled);
 	}
 
-	return {data, togglePolling, isEnabled};
+	return {data, isEnabled, togglePolling};
 }

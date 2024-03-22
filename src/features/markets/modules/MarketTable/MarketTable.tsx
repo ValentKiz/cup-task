@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import './MarketTable.scss';
-import useMarketsData from '../../useMarketsData';
 import {CurrenciesTypes, MarketEndpoints} from '../../types';
+import useMarketsData from '../../useMarketsData';
+import './MarketTable.scss';
 
 export const marketEndpoints: MarketEndpoints = ['first', 'second', 'third'];
 
@@ -15,7 +15,7 @@ export const marketCurrencies: CurrenciesTypes = [
 ];
 
 export default function MarketTable() {
-	const {data, togglePolling, isEnabled} = useMarketsData();
+	const {data, isEnabled, togglePolling} = useMarketsData();
 
 	function handleTogglePolling(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 		e.preventDefault();
